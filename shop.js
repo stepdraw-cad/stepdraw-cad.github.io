@@ -1,7 +1,7 @@
 // StepDraw CAD – Shop-Einstellungen der Website (die einzige Datei, die zum Verkaufsstart angepasst wird)
 // Kauflinks aus Lemon Squeezy (Produkt → Variante → "Share" → Checkout-Link) hier eintragen.
 const SHOP = {
-  launch: "2026-11-30",              // Verkaufsstart (JJJJ-MM-TT); ab diesem Tag: Banner weg, Kaufknöpfe aktiv
+  launch: "2026-11-30",              // Verkaufsstart (JJJJ-MM-TT); ab diesem Tag: Banner weg, Preise sichtbar, Kaufknöpfe aktiv
   buy: {
     monthly:   "",                   // z. B. "https://stepdraw.lemonsqueezy.com/buy/…"
     yearly:    "",
@@ -15,6 +15,7 @@ const SHOP = {
   const en = document.documentElement.lang === "en";
   const live = new Date() >= new Date(SHOP.launch + "T00:00:00");
   if (live) {
+    document.documentElement.classList.add("live");   // Preise einblenden
     const b = document.querySelector(".banner");
     if (b) b.remove();
   }

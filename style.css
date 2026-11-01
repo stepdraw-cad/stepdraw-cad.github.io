@@ -90,3 +90,23 @@ footer a { color: #fff; margin-right: 16px; }
   .hero h1 { font-size: 32px; }
   nav a:not(.lang) { display: none; }
 }
+
+/* Vor dem Verkaufsstart: Preise ausgeblendet (shop.js setzt ab dem Startdatum die Klasse "live") */
+.after-launch { display: none; }
+html.live .after-launch { display: block; }
+html.live .before-launch { display: none; }
+.before-launch { text-align: center; padding: 10px 0 6px; }
+.after-inline { display: none; }
+html.live .after-inline { display: inline; }
+
+/* Video und 3D-Abschnitt */
+.video { max-width: 960px; margin: 0 auto; border-radius: 12px; overflow: hidden; border: 1px solid var(--border);
+         box-shadow: 0 10px 30px rgba(36, 56, 91, .15); background: #000; }
+.video video { display: block; width: 100%; height: auto; }
+.split { display: grid; grid-template-columns: 1.3fr 1fr; gap: 36px; align-items: center; }
+.split img { width: 100%; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(36, 56, 91, .12); }
+.sub.left { text-align: left; margin-left: 0; }
+.checks { list-style: none; padding: 0; margin: 14px 0 0; }
+.checks li { padding: 6px 0 6px 30px; position: relative; }
+.checks li::before { content: "✓"; position: absolute; left: 0; color: #2E8B57; font-weight: 700; }
+@media (max-width: 800px) { .split { grid-template-columns: 1fr; } }
