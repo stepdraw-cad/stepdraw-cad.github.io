@@ -127,3 +127,10 @@ html.live .prices.after-launch { display: grid; }
 .module-paket p { margin: 0; color: var(--muted); }
 .module-faq { max-width: 820px; margin: 0 auto 26px; }
 @media (max-width: 800px) { .module.rev img { order: 0; } }
+
+/* Hinweis Windows SmartScreen */
+.smartscreen { max-width: 760px; margin: 26px 0 0; text-align: left; background: var(--bg-soft); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px 20px; font-size: 15px; }
+.smartscreen p { margin: 0 0 8px; }
+.smartscreen ol { margin: 0 0 8px; padding-left: 22px; }
+.smartscreen .small { color: var(--muted); font-size: 14px; margin: 0; }

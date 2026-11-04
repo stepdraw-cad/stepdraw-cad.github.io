@@ -53,4 +53,5 @@ const SHOP = {
   if (dl && SHOP.download) dl.href = SHOP.download;
   const st = document.getElementById("store-link");
   if (st && SHOP.store) st.href = SHOP.store;
+  else if (st && st.parentElement) st.parentElement.style.display = "none";   // noch kein Store-Eintrag
 })();
