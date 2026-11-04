@@ -110,3 +110,20 @@ html.live .after-inline { display: inline; }
 .checks li { padding: 6px 0 6px 30px; position: relative; }
 .checks li::before { content: "✓"; position: absolute; left: 0; color: #2E8B57; font-weight: 700; }
 @media (max-width: 800px) { .split { grid-template-columns: 1fr; } }
+
+.price .sublinks { margin-top: 10px; font-size: 14px; color: var(--muted); text-align: center; }
+.price .sublinks a.disabled { color: var(--muted); pointer-events: none; text-decoration: none; }
+#zusatzmodule .price { scroll-margin-top: 80px; }
+html.live .prices.after-launch { display: grid; }
+
+/* Zusatzmodule: Erklärungen */
+.module { margin: 34px 0; }
+.module h3 { font-size: 26px; color: var(--navy); margin: 0 0 6px; }
+.module.rev img { order: 2; }
+.howto { margin: 14px 0 6px; padding-left: 22px; color: var(--text); }
+.howto li { padding: 3px 0; }
+.module-paket { text-align: center; margin: 10px 0 18px; }
+.module-paket h3 { color: var(--navy); margin: 0 0 4px; font-size: 22px; }
+.module-paket p { margin: 0; color: var(--muted); }
+.module-faq { max-width: 820px; margin: 0 auto 26px; }
+@media (max-width: 800px) { .module.rev img { order: 0; } }
