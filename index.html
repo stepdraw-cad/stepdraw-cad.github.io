@@ -4,18 +4,33 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>StepDraw CAD – Fertigungszeichnungen aus STEP-Dateien</title>
-<meta name="description" content="StepDraw CAD erstellt aus STEP-Dateien automatisch normgerechte Fertigungszeichnungen mit Bemaßung, Schnitten und Einzelheiten – als PDF und DXF.">
+<meta name="description" content="StepDraw CAD erstellt aus STEP-Dateien automatisch normgerechte Fertigungszeichnungen mit Bemaßung, Schnitten und Einzelheiten – als PDF und DXF. Dazu Prüfplan, Messwerteblatt und Angebot, auch aus vorhandenen PDF-Zeichnungen.">
 <link rel="icon" href="assets/favicon.png">
+<link rel="canonical" href="https://stepdraw.de/">
+<link rel="alternate" hreflang="de" href="https://stepdraw.de/">
+<link rel="alternate" hreflang="en" href="https://stepdraw.de/en/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StepDraw CAD">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://stepdraw.de/">
+<meta property="og:title" content="StepDraw CAD – STEP rein, Fertigungszeichnung raus">
+<meta property="og:description" content="Normgerechte Fertigungszeichnungen automatisch aus STEP-Dateien – dazu Prüfplan, Messwerteblatt und Angebot, auch aus PDF-Zeichnungen. Offene Beta, kostenlos testen.">
+<meta property="og:image" content="https://stepdraw.de/assets/og_de.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="StepDraw CAD mit automatisch bemaßter Fertigungszeichnung">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="banner">🚧 Testphase – Verkaufsstart am <span class="launch">30.11.2026</span>. Bis dahin ist StepDraw CAD kostenlos als Testversion erhältlich.</div>
+<div class="banner">🧪 Offene Beta – StepDraw CAD wird laufend verbessert. Kostenlos testen oder <a href="#preise">vorab zum Gründerpreis −25&nbsp;% kaufen</a>.</div>
 
 <header class="top"><div class="wrap">
   <a href="#"><img class="logo" src="assets/logo.png" alt="StepDraw CAD"></a>
   <nav>
     <a href="#so-gehts">So geht's</a>
+    <a href="#neu">Neu</a>
     <a href="#video">Video</a>
     <a href="#funktionen">Funktionen</a>
     <a href="#preise">Preise</a>
@@ -29,10 +44,10 @@
   <div>
     <h1>STEP rein –<br><span>Fertigungszeichnung</span> raus.</h1>
     <p class="lead">StepDraw CAD erstellt aus Ihrem 3D-Modell automatisch eine normgerechte Werkstattzeichnung – mit Bemaßung, Schnitten, Einzelheiten, Gewinden und Ihrem Schriftfeld. In Minuten statt Stunden.</p>
-    <a class="btn btn-primary" href="#download">Kostenlos testen</a>
+    <a class="btn btn-primary" href="#download">Beta kostenlos testen</a>
     <a class="btn btn-ghost" href="#preise">Preise</a>
   </div>
-  <img src="assets/beispiel_fraesteil.png" alt="Automatisch erzeugte Fertigungszeichnung eines Frästeils">
+  <img width="909" height="1285" src="assets/beispiel_fraesteil.png" alt="Automatisch erzeugte Fertigungszeichnung eines Frästeils">
 </div></section>
 
 <section id="so-gehts"><div class="wrap">
@@ -45,18 +60,52 @@
   </div>
 </div></section>
 
+<section id="neu" class="soft"><div class="wrap">
+  <h2>Neu in der Beta</h2>
+  <p class="sub">Die wichtigsten Neuerungen der letzten Versionen – alle aus Rückmeldungen aus der Praxis.</p>
+  <div class="features news">
+    <div class="feature"><span class="badge">Zusatzmodul</span><h3>Prüfplan aus PDF-Zeichnung</h3><p>Kundenzeichnung als PDF hineinziehen: Maße, Toleranzen, Passungen und Gewinde werden erkannt und nummeriert. Unsichere Stellen sind gelb markiert – nachtragen per Rahmen.</p></div>
+    <div class="feature"><span class="badge">Zusatzmodul</span><h3>Angebot aus PDF-Zeichnung</h3><p>Auch ohne 3D-Modell: Außenmaße werden aus der Zeichnung vorgeschlagen, Bohrungen, Gewinde und enge Toleranzen gezählt – weiter in der Angebotskalkulation.</p></div>
+    <div class="feature"><span class="badge">Zusatzmodul</span><h3>Messwerteblatt für die Fertigung</h3><p>Spalten automatisch aus Losgröße und Prüfhäufigkeit, Bezug M1, M2 … zur Zeichnung, Prüfmittel und Prüfmittel-Nr., Datum und Prüfer je Messung.</p></div>
+    <div class="feature"><h3>Neue Oberfläche</h3><p>Klar und ruhig, hell oder dunkel. Ein Assistent führt durch Lage, Bezüge und wichtige Merkmale; die Prüfliste zeigt offene Punkte und springt zur Stelle.</p></div>
+    <div class="feature"><h3>Maße frei platzieren</h3><p>Ein Maß bleibt genau dort, wo Sie es hinziehen. Auf Wunsch rückt die Normhilfe es an eine freie, normgerechte Stelle; Feinverschieben mit den Pfeiltasten.</p></div>
+    <div class="feature"><h3>Durchsuchbare PDFs</h3><p>Maße und Schriftfeld stehen als echter Text in der PDF – mit Strg+F suchbar, kopierbar und von Prüf- und Dokumentensoftware lesbar. Die Dateien werden deutlich kleiner.</p></div>
+    <div class="feature"><h3>Automatisch gesichert</h3><p>Ihr Stand wird alle paar Minuten still gesichert. Nach einem Absturz bietet das Programm beim nächsten Start die Wiederherstellung an.</p></div>
+    <div class="feature"><h3>Feinere Linien</h3><p>Liniengruppe nach ISO 128-2 automatisch passend zum Blatt: A4/A3 0,25 mm, A2/A1 0,35 mm, A0 0,5 mm.</p></div>
+    <div class="feature"><h3>Bezüge selbst wählen</h3><p>Bezugskante, Bohrung oder Absatz anklicken – wichtige Merkmale werden direkt vom Bezug aus bemaßt; Bezüge ein- und ausblendbar.</p></div>
+  </div>
+</div></section>
+
+<section id="oberflaeche"><div class="wrap">
+  <h2>Die Oberfläche</h2>
+  <p class="sub">Alles Wichtige auf einen Blick – und nichts, was ablenkt.</p>
+  <div class="split rev-ui">
+    <figure class="side-shot"><img width="1600" height="956" src="assets/app_dunkel.jpg" alt="StepDraw CAD im dunklen Erscheinungsbild mit Drehteil" loading="lazy"><figcaption>Dunkles Erscheinungsbild – Drehteil automatisch erkannt und bemaßt</figcaption></figure>
+    <div>
+      <ul class="checks">
+        <li><b>Automatisch bemaßen</b> mit einem Klick – oder Schritt für Schritt mit dem Assistenten</li>
+        <li><b>Prüfliste</b> (F8): fehlende Maße und Überdeckungen, ein Klick zeigt die Stelle; Überdeckungen automatisch lösen</li>
+        <li><b>Rechtsklick</b> direkt am Maß: bearbeiten, Hilfsmaß, theoretisch genau, normgerecht setzen</li>
+        <li><b>Dateien hineinziehen</b>: STEP, Projekt oder PDF-Zeichnung</li>
+        <li><b>Hell oder dunkel</b> – oder automatisch wie Windows</li>
+      </ul>
+    </div>
+  </div>
+  <figure class="wide-shot"><img width="1600" height="956" src="assets/app_hell.jpg" alt="StepDraw CAD mit bemaßtem Frästeil und Prüfliste" loading="lazy"><figcaption>Hauptfenster: Frästeil automatisch bemaßt, rechts die Prüfliste</figcaption></figure>
+</div></section>
+
 <section class="soft"><div class="wrap">
   <h2>Vom Modell zur Zeichnung</h2>
   <p class="sub">Links das STEP-Modell, rechts die automatisch erzeugte Zeichnung.</p>
   <div class="compare">
-    <figure><img src="assets/modell_fraesteil.png" alt="3D-Modell"><figcaption>3D-Modell (STEP)</figcaption></figure>
-    <figure><img src="assets/beispiel_fraesteil.png" alt="Fertige Zeichnung"><figcaption>Fertige Zeichnung – automatisch erstellt</figcaption></figure>
+    <figure><img width="920" height="663" src="assets/modell_fraesteil.png" alt="3D-Modell"><figcaption>3D-Modell (STEP)</figcaption></figure>
+    <figure><img width="909" height="1285" src="assets/beispiel_fraesteil.png" alt="Fertige Zeichnung"><figcaption>Fertige Zeichnung – automatisch erstellt</figcaption></figure>
   </div>
 </div></section>
 
 <section id="video"><div class="wrap">
-  <h2>In 20 Sekunden erklärt</h2>
-  <p class="sub">STEP-Datei öffnen, automatisch bemaßen, 3D-Modell ansehen, drucken – so sieht die Arbeit mit StepDraw CAD aus.</p>
+  <h2>In 35 Sekunden gezeigt</h2>
+  <p class="sub">STEP-Datei öffnen, automatisch bemaßen, 3D-Modell prüfen – dann aus der PDF-Zeichnung den Prüfplan und das fertige Angebot erstellen. Mit Untertiteln.</p>
   <div class="video"><video controls playsinline preload="none" poster="assets/video_poster_de.jpg">
     <source src="assets/demo_de.mp4" type="video/mp4">
     Ihr Browser kann das Video nicht abspielen – <a href="assets/demo_de.mp4">hier herunterladen</a>.
@@ -64,7 +113,7 @@
 </div></section>
 
 <section class="soft"><div class="wrap split">
-  <img src="assets/ansicht_3d_de.jpg" alt="3D-Ansicht des Bauteils in StepDraw CAD" loading="lazy">
+  <img width="1280" height="720" src="assets/ansicht_3d_de.jpg" alt="3D-Ansicht des Bauteils in StepDraw CAD" loading="lazy">
   <div>
     <h2>Das Bauteil in 3D</h2>
     <p class="sub left">Mit einem Klick (Taste F3) öffnet sich das Modell in einem eigenen 3D-Fenster – zum Prüfen, bevor Sie die Zeichnung freigeben.</p>
@@ -86,48 +135,56 @@
     <div class="feature"><h3>Einzelheiten</h3><p>Enge Bereiche werden vergrößert dargestellt und dort bemaßt – auf Wunsch auf einem zweiten Blatt.</p></div>
     <div class="feature"><h3>Bohrungen &amp; Gewinde</h3><p>„4× M6“, „Ø10 / Senkung Ø16×6“ nach ISO 15786 und ISO 6410, Kernlöcher nach DIN 336.</p></div>
     <div class="feature"><h3>Ihr Schriftfeld</h3><p>Firma, Logo, Personen, Werkstoff mit Dichte, Masse und Schwerpunkt, Allgemeintoleranz ISO 2768.</p></div>
-    <div class="feature"><h3>PDF, DXF, Druck</h3><p>Maßstabsgetreu auf A4 bis A0, mehrere Blätter, Druckvorschau, 3D-Ansicht des Bauteils.</p></div>
+    <div class="feature"><h3>PDF, DXF, Druck</h3><p>Maßstabsgetreu auf A4 bis A0, Linienbreiten nach ISO 128-2, mehrere Blätter, Druckvorschau, 3D-Ansicht des Bauteils.</p></div>
     <div class="feature"><h3>Offline &amp; vertraulich</h3><p>Ihre Modelle und Zeichnungen verlassen Ihren Rechner nicht.</p></div>
     <div class="feature"><h3>Toleranzen &amp; Passungen</h3><p>ISO 286 Passungen, Form- und Lagetoleranzen, Oberflächenangaben.</p></div>
-    <div class="feature"><h3>Ständig verbessert</h3><p>Regelmäßige Updates – das Programm meldet neue Versionen automatisch.</p></div>
+    <div class="feature"><h3>Prüfliste &amp; Assistent</h3><p>Offene Punkte vor der Freigabe sehen, Bezüge und wichtige Merkmale gezielt festlegen.</p></div>
+    <div class="feature"><h3>Durchsuchbare PDFs</h3><p>Text in der PDF bleibt Text – suchen, kopieren, weiterverarbeiten. Umschaltbar in der Firmenvorlage.</p></div>
+    <div class="feature"><h3>Ständig verbessert</h3><p>Regelmäßige Updates – das Programm meldet neue Versionen automatisch. Ihr Stand wird automatisch gesichert.</p></div>
   </div>
 </div></section>
 
 <section id="preise" class="soft"><div class="wrap">
   <h2>Preise</h2>
-  <div class="before-launch">
-    <p class="sub">Preise und unser <b>Gründer-Angebot</b> für die ersten Kunden veröffentlichen wir zum Verkaufsstart am <span class="launch">30.11.2026</span>.</p>
-    <p class="sub">Bis dahin ist StepDraw CAD als <b>kostenlose Testversion</b> erhältlich – probieren Sie es mit Ihren eigenen Modellen aus.</p>
-    <a class="btn btn-primary" href="#download">Kostenlos testen</a>
+  <div class="beta-box" id="beta">
+    <h3>Offene Beta – was das für Sie bedeutet</h3>
+    <ul>
+      <li><b>Kostenlos testen</b> mit allen Funktionen – Ausgaben mit Wasserzeichen, ohne DXF-Export.</li>
+      <li><b>Vorab kaufen</b> zum Gründerpreis −25&nbsp;%. Sie erhalten den aktuellen Beta-Stand: Die automatische Bemaßung ist noch nicht in jedem Fall vollständig und fehlerfrei, und Funktionen können sich bis zur Version 1.0 ändern.</li>
+      <li><b>Version 1.0 ist inklusive</b> – ohne Aufpreis.</li>
+      <li><b>Feedback lohnt sich:</b> Für verwertbare Rückmeldungen erhalten Sie einen Code über 25&nbsp;% auf die nächste Verlängerung oder ein späteres Abo (nicht mit dem Gründerpreis kombinierbar).</li>
+    </ul>
+    <p class="small">Die Beta hat kein festes Enddatum. Einzelheiten in den <a href="agb.html#beta">AGB, Ziffer 2.6 und 2.7</a>.</p>
+    <label class="beta-ok"><input type="checkbox" id="beta-ok"> Ich habe die Beta-Hinweise gelesen und bin einverstanden, dass ich den Beta-Stand mit den genannten Einschränkungen erwerbe.</label>
   </div>
   <div class="after-launch">
-  <p class="sub">Preise ab Verkaufsstart am <span class="launch">30.11.2026</span>. Eine Lizenz gilt für einen Rechner.</p>
-  <p class="counter">🎉 Gründerpreis −25 % für die ersten 20 Käufer: noch <b id="founders-left">20</b> von 20 verfügbar</p>
+  <p class="sub">Eine Lizenz gilt für einen Rechner.</p>
+  <p class="counter">🎉 Beta-Gründerpreis −25&nbsp;% für die ersten 20 Käufer: noch <b id="founders-left">20</b> von 20 verfügbar<br><small>Der Rabatt wird im Bestellvorgang automatisch eingetragen.</small></p>
   <div class="prices">
     <div class="price">
       <h3>Monatsabo</h3>
       <div class="amount">29 € <small>netto / Monat</small></div>
-      <div class="gross">34,51 € inkl. 19 % MwSt.</div>
+      <div class="gross">34,51 € inkl. 19&nbsp;% MwSt.</div>
       <div class="founder">Gründerpreis im 1. Jahr: <b>21,75 €</b> netto (25,88 € inkl. MwSt.)</div>
       <ul><li>Alle Funktionen inkl. DXF</li><li>Alle Updates</li><li>Monatlich kündbar</li></ul>
-      <a class="btn disabled" aria-disabled="true" data-buy="monthly">Ab 30.11.2026</a>
+      <a class="btn disabled" aria-disabled="true" data-buy="monthly">Vorab kaufen</a>
     </div>
     <div class="price best">
       <span class="tag">2 Monate gratis</span>
       <h3>Jahresabo</h3>
       <div class="amount">290 € <small>netto / Jahr</small></div>
-      <div class="gross">345,10 € inkl. 19 % MwSt.</div>
+      <div class="gross">345,10 € inkl. 19&nbsp;% MwSt.</div>
       <div class="founder">Gründerpreis im 1. Jahr: <b>217,50 €</b> netto (258,83 € inkl. MwSt.)</div>
       <ul><li>Alle Funktionen inkl. DXF</li><li>Alle Updates</li><li>Jährlich kündbar</li></ul>
-      <a class="btn disabled" aria-disabled="true" data-buy="yearly">Ab 30.11.2026</a>
+      <a class="btn disabled" aria-disabled="true" data-buy="yearly">Vorab kaufen</a>
     </div>
     <div class="price">
       <h3>Kauf</h3>
       <div class="amount">690 € <small>netto einmalig</small></div>
-      <div class="gross">821,10 € inkl. 19 % MwSt.</div>
+      <div class="gross">821,10 € inkl. 19&nbsp;% MwSt.</div>
       <div class="founder">Gründerpreis: <b>517,50 €</b> netto (615,83 € inkl. MwSt.)</div>
       <ul><li>Unbefristete Lizenz</li><li>12 Monate Updates inklusive</li><li>Danach optional 149 € netto/Jahr (177,31 € inkl. MwSt.)</li></ul>
-      <a class="btn disabled" aria-disabled="true" data-buy="perpetual">Ab 30.11.2026</a>
+      <a class="btn disabled" aria-disabled="true" data-buy="perpetual">Vorab kaufen</a>
     </div>
   </div>
     </div>
@@ -139,10 +196,10 @@
   <p class="sub">Zur Vollversion zubuchbar – eigener Lizenzschlüssel, Freischaltung im Programm unter <i>Module → Zusatzmodul freischalten</i>. In der Free-Version ausgegraut.</p>
 
   <div class="module split">
-    <img src="assets/modul_pruefplan.jpg" alt="Zeichnung mit nummerierten Prüfmerkmalen und Erstmusterprüfbericht" loading="lazy">
+    <img width="1600" height="836" src="assets/modul_pruefplan.jpg" alt="Zeichnung mit nummerierten Prüfmerkmalen und Erstmusterprüfbericht" loading="lazy">
     <div>
       <h3>Prüfplan &amp; Erstbemusterung</h3>
-      <p class="sub left">Aus der fertigen Zeichnung entsteht per Knopfdruck der Prüfplan: Jedes Maß bekommt eine Nummer (Ballon), das Prüfprotokoll füllt sich von selbst.</p>
+      <p class="sub left">Aus der fertigen Zeichnung entsteht per Knopfdruck der Prüfplan: Jedes Maß bekommt eine Nummer (Ballon), das Prüfprotokoll füllt sich von selbst – mit Live-Vorschau, während Sie bearbeiten.</p>
       <ol class="howto">
         <li>Zeichnung wie gewohnt bemaßen.</li>
         <li><i>Module → Prüfplan &amp; Erstmusterprüfbericht</i>: alle Maße, Bohrungen, Gewinde, Toleranzen und Angaben aus dem Schriftfeld werden nummeriert.</li>
@@ -152,17 +209,52 @@
       </ol>
       <ul class="checks">
         <li>Höchst- und Mindestmaße nach ISO 286 und ISO 2768 automatisch</li>
-        <li>Prüfmittel-Vorschlag je Merkmal (Messschieber, Grenzlehrdorn, Gewindelehrdorn …)</li>
+        <li>Prüfmittel und Prüfmittel-Nr. per Auswahlliste aus Ihrer Firmenvorlage – wichtig für die QM</li>
+        <li>Live-Vorschau des Protokolls, ein- und ausblendbar; bei wenigen Maßen größere Zeilen und Zeichnungsübersicht</li>
         <li>Ballons verschieben die Maße nicht – die Zeichnung bleibt, wie sie ist</li>
       </ul>
     </div>
   </div>
 
   <div class="module split rev">
-    <img src="assets/modul_kalkulation.jpg" alt="Kalkulationsblatt und Angebot aus StepDraw CAD" loading="lazy">
+    <img width="1188" height="840" src="assets/messwerteblatt.jpg" alt="Messwerteblatt für die Fertigung mit Spalten je geprüftem Teil" loading="lazy">
+    <div>
+      <h3>Messwerteblatt für die Fertigung</h3>
+      <p class="sub left">Für die laufende Serie: Losgröße und Prüfhäufigkeit eingeben – die Spalten entstehen von selbst.</p>
+      <ul class="checks">
+        <li>„Jedes n-te Teil“, „n Messungen über das Los“ oder „jedes Teil“, erstes und letztes Teil auf Wunsch immer dabei</li>
+        <li>Bezug M1, M2 … – die Nummern auf der Zeichnung, nicht mit Blattzonen verwechselbar</li>
+        <li>Prüfmittel mit Nummer und Beschreibung, Datum und Prüfer unter jeder Messung</li>
+        <li>CSV-Ausgabe als Schnittstelle, z. B. für eine spätere Erfassung per App</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module split" id="pdf-pruefplan">
+    <img width="1600" height="882" src="assets/pdf_pruefplan.jpg" alt="Prüfplan aus einer PDF-Zeichnung: erkannte Maße grün markiert und nummeriert" loading="lazy">
+    <div>
+      <h3>Prüfplan aus PDF-Zeichnung <span class="badge">neu</span></h3>
+      <p class="sub left">Für Zeichnungen, die nicht aus StepDraw stammen – etwa vom Kunden. Kein 3D-Modell nötig.</p>
+      <ol class="howto">
+        <li><i>Module → Prüfplan aus PDF-Zeichnung</i> – oder die PDF einfach ins Programm ziehen.</li>
+        <li>Maße, Toleranzen, Passungen, Gewinde, Bohrungstiefen, Fasen, Ra und Form-/Lagetoleranzen werden erkannt, Zeichnungsnummer, Werkstoff und Allgemeintoleranz aus dem Schriftfeld gelesen.</li>
+        <li>Grün = sicher erkannt, gelb = bitte prüfen (mit Grund). Werte in der Liste korrigieren, Fehlendes auf der Zeichnung einrahmen.</li>
+        <li>Ausgabe: die Original-PDF mit Prüfnummern (gestochen scharf als Vektorgrafik) plus Protokoll, Messwerteblatt, Excel und CSV.</li>
+      </ol>
+      <ul class="checks">
+        <li>Liest PDFs aus gängigen CAD-Systemen, auch AutoCAD-Sonderzeichen</li>
+        <li>Vorhandene Prüfnummern des Kunden werden nicht doppelt gezählt</li>
+        <li>Eingescannte Zeichnungen: Merkmale per Rahmen erfassen (Texterkennung ist geplant)</li>
+        <li>Im Zusatzmodul Prüfplan enthalten</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module split rev">
+    <img width="1400" height="862" src="assets/modul_kalkulation.jpg" alt="Kalkulationsblatt und Angebot aus StepDraw CAD" loading="lazy">
     <div>
       <h3>Angebotskalkulation</h3>
-      <p class="sub left">Vom 3D-Modell zum Angebot in wenigen Minuten: Rohteil, Arbeitsschritte und Zeiten werden aus dem Bauteil abgeleitet – Sie prüfen und passen an.</p>
+      <p class="sub left">Vom 3D-Modell – oder von einer PDF-Zeichnung – zum Angebot in wenigen Minuten: Rohteil, Arbeitsschritte und Zeiten werden aus dem Bauteil abgeleitet, Sie prüfen und passen an.</p>
       <ol class="howto">
         <li>Teil öffnen und bemaßen.</li>
         <li><i>Module → Angebotskalkulation</i>: Rohteil (Block oder Stange) und Materialkosten werden aus Modell und Werkstoff berechnet.</li>
@@ -173,6 +265,7 @@
       <ul class="checks">
         <li>Maschinen- und Stundensätze einmal in der Firmenvorlage einstellen</li>
         <li>Fremdleistungen (z. B. Härten, Beschichten) ergänzbar</li>
+        <li><b>Neu:</b> Angebot auch aus einer PDF-Zeichnung – Außenmaße werden vorgeschlagen, Merkmale gezählt</li>
         <li>Richtwerte als Grundlage – die Entscheidung über den Preis bleibt bei Ihnen</li>
       </ul>
     </div>
@@ -181,6 +274,7 @@
   <div class="module-paket">
     <h3>Duo-Paket</h3>
     <p>Beide Module mit <b>einem</b> Lizenzschlüssel – günstiger als einzeln.</p>
+    <p class="beta-price">Beta-Preise – die Preise der Zusatzmodule steigen mit Version 1.0. Wer jetzt kauft, behält seinen Preis und den vollen Funktionsumfang.</p>
   </div>
 
   <div class="module-faq">
@@ -192,40 +286,41 @@
       <p>Ja, Monats- und Jahresabos sind zum Ende der Laufzeit kündbar. Danach ist das Modul wieder gesperrt; Ihre Zeichnungen und Projekte bleiben erhalten.</p></details>
   </div>
 
-  <p class="sub before-launch">Preise der Zusatzmodule ab Verkaufsstart am <span class="launch">30.11.2026</span>.</p>
   <div class="prices after-launch">
     <div class="price" id="pruefplan">
       <h3>Prüfplan &amp; Erstmusterprüfbericht</h3>
-      <div class="amount">149 € <small>netto einmalig</small></div>
-      <div class="gross">177,31 € inkl. 19 % MwSt. · oder 9 €/Monat bzw. 90 €/Jahr netto</div>
-      <ul><li>Nummerierte Prüfmerkmale (Ballons) per Knopfdruck</li><li>Erstmusterprüfbericht oder Fertigungsprüfprotokoll</li><li>Grenzmaße nach ISO 286 / ISO 2768, Export PDF/Excel/CSV</li></ul>
-      <a class="btn disabled" aria-disabled="true" data-buy="pp_kauf">Ab 30.11.2026</a>
+      <div class="amount">249 € <small>netto einmalig</small></div>
+      <div class="gross">296,31 € inkl. 19&nbsp;% MwSt. · oder 19 €/Monat bzw. 190 €/Jahr netto</div>
+      <ul><li>Nummerierte Prüfmerkmale (Ballons) per Knopfdruck</li><li>Erstmusterprüfbericht, Fertigungsprüfprotokoll und Messwerteblatt</li><li>Prüfplan auch aus PDF-Zeichnungen</li><li>Grenzmaße nach ISO 286 / ISO 2768, Export PDF/Excel/CSV</li></ul>
+      <a class="btn disabled" aria-disabled="true" data-buy="pp_kauf">Vorab kaufen</a>
       <div class="sublinks"><a class="disabled" aria-disabled="true" data-buy-small="pp_monat">Monatsabo</a> · <a class="disabled" aria-disabled="true" data-buy-small="pp_jahr">Jahresabo</a></div>
     </div>
     <div class="price" id="kalkulation">
       <h3>Angebotskalkulation</h3>
       <div class="amount">199 € <small>netto einmalig</small></div>
-      <div class="gross">236,81 € inkl. 19 % MwSt. · oder 12 €/Monat bzw. 120 €/Jahr netto</div>
-      <ul><li>Kalkulationsblatt aus der Zeichnung</li><li>Rohteil, Arbeitsschritte, Zeiten, Staffelpreise</li><li>Angebot als PDF, Export Excel</li></ul>
-      <a class="btn disabled" aria-disabled="true" data-buy="kk_kauf">Ab 30.11.2026</a>
+      <div class="gross">236,81 € inkl. 19&nbsp;% MwSt. · oder 12 €/Monat bzw. 120 €/Jahr netto</div>
+      <ul><li>Kalkulationsblatt aus der Zeichnung</li><li>Rohteil, Arbeitsschritte, Zeiten, Staffelpreise</li><li>Auch aus PDF-Zeichnungen</li><li>Angebot als PDF, Export Excel</li></ul>
+      <a class="btn disabled" aria-disabled="true" data-buy="kk_kauf">Vorab kaufen</a>
       <div class="sublinks"><a class="disabled" aria-disabled="true" data-buy-small="kk_monat">Monatsabo</a> · <a class="disabled" aria-disabled="true" data-buy-small="kk_jahr">Jahresabo</a></div>
     </div>
     <div class="price" id="paket">
       <h3>Paket: Prüfplan + Kalkulation</h3>
-      <div class="amount">299 € <small>netto einmalig</small></div>
-      <div class="gross">355,81 € inkl. 19 % MwSt. · oder 18 €/Monat bzw. 180 €/Jahr netto</div>
+      <div class="amount">399 € <small>netto einmalig</small></div>
+      <div class="gross">474,81 € inkl. 19&nbsp;% MwSt. · oder 29 €/Monat bzw. 290 €/Jahr netto</div>
       <ul><li>Beide Module mit einem Schlüssel</li><li>Günstiger als einzeln</li></ul>
-      <a class="btn disabled" aria-disabled="true" data-buy="paket_kauf">Ab 30.11.2026</a>
+      <a class="btn disabled" aria-disabled="true" data-buy="paket_kauf">Vorab kaufen</a>
       <div class="sublinks"><a class="disabled" aria-disabled="true" data-buy-small="paket_monat">Monatsabo</a> · <a class="disabled" aria-disabled="true" data-buy-small="paket_jahr">Jahresabo</a></div>
     </div>
   </div>
 </div></section>
 
 <section id="download"><div class="wrap">
-  <h2>Kostenlos testen</h2>
-  <p class="sub">Windows 10/11 (64 Bit). Die Testversion ist voll funktionsfähig, Ausgaben tragen ein Wasserzeichen.</p>
-  <a class="btn btn-dark" href="#" id="download-link">Download für Windows</a>
-  <span style="margin-left:14px;color:var(--muted)">oder im <a href="#" id="store-link">Microsoft Store</a></span>
+  <h2>Beta kostenlos testen</h2>
+  <p class="sub">Windows 10/11 (64 Bit). Die Beta-Version ist voll funktionsfähig, Ausgaben tragen ein Wasserzeichen. Ihre Hinweise erreichen uns direkt im Programm unter <i>Hilfe → Problem melden / Feedback</i>.</p>
+  <div class="download-row">
+    <a class="btn btn-dark" href="#" id="download-link">Download für Windows</a>
+    <span class="store">oder im <a href="#" id="store-link">Microsoft Store</a></span>
+  </div>
   <div class="smartscreen">
     <p><b>Hinweis zur Windows-Meldung:</b> Beim ersten Start kann Windows „Der Computer wurde durch Windows geschützt“ anzeigen. Das erscheint bei neuen Programmen, die Windows noch nicht oft gesehen hat – es bedeutet nicht, dass etwas nicht stimmt.</p>
     <ol>
@@ -239,6 +334,10 @@
 
 <section id="faq" class="soft"><div class="wrap">
   <h2>Häufige Fragen</h2>
+  <details><summary>Was bedeutet „offene Beta“?</summary>
+    <p>StepDraw CAD ist einsatzbereit, wird aber noch intensiv weiterentwickelt – vor allem die automatische Bemaßung. Jeder kann das Programm kostenlos testen. Wer schon jetzt eine Lizenz möchte, kauft vorab zum Gründerpreis (−25&nbsp;%) und erhält Version 1.0 ohne Aufpreis. Bis dahin können sich Funktionen noch ändern, und nicht jede Zeichnung ist ohne Nacharbeit vollständig. Ein festes Enddatum gibt es nicht – die Beta endet mit Version 1.0.</p></details>
+  <details><summary>Wie bekomme ich den Feedback-Rabatt?</summary>
+    <p>Schicken Sie uns während der Beta eine verwertbare Rückmeldung – einen Fehler, eine fehlende Bemaßung, einen Verbesserungsvorschlag – über <i>Hilfe → Problem melden / Feedback</i> oder an <a href="mailto:support@stepdraw.de">support@stepdraw.de</a>. Sie erhalten dann per E-Mail einen persönlichen Code über 25&nbsp;% auf Ihre nächste Verlängerung oder ein späteres Abo. Der Code ist nicht mit dem Gründerpreis kombinierbar.</p></details>
   <details><summary>Windows zeigt „Der Computer wurde durch Windows geschützt“ – ist das Programm sicher?</summary>
     <p>Diese Meldung (Microsoft Defender SmartScreen) erscheint bei neuen Programmen, die Windows noch selten gesehen hat. Klicken Sie auf „Weitere Informationen“ und dann auf „Trotzdem ausführen“. Laden Sie das Programm nur von stepdraw.de herunter.</p></details>
   <details><summary>Ist die automatisch erstellte Zeichnung immer fehlerfrei?</summary>
@@ -255,6 +354,12 @@
     <p>Im Microsoft Store automatisch. Bei der Download-Version meldet das Programm neue Versionen beim Start – ein Klick genügt.</p></details>
   <details><summary>Ich habe einen Fehler gefunden – was tun?</summary>
     <p>Danke! Im Programm unter <i>Hilfe → Problem melden / Feedback</i> schicken Sie uns die Beschreibung, auf Wunsch mit der Zeichnung als PDF. Oder schreiben Sie an <a href="mailto:support@stepdraw.de">support@stepdraw.de</a>. Korrekturen kommen per Update.</p></details>
+  <details><summary>Kann ich auch Kundenzeichnungen als PDF verwenden?</summary>
+    <p>Ja, mit dem Zusatzmodul Prüfplan: <i>Module → Prüfplan aus PDF-Zeichnung</i>. StepDraw CAD liest Maße und Angaben aus PDFs, die ein CAD-System erzeugt hat, nummeriert sie und erstellt Protokoll und Messwerteblatt. Unsichere Stellen werden markiert und lassen sich korrigieren. Mit dem Zusatzmodul Angebotskalkulation entsteht daraus auch ein Angebot. Die Zeichnung bleibt dabei auf Ihrem Rechner.</p></details>
+  <details><summary>Was ist mit eingescannten Papierzeichnungen?</summary>
+    <p>Eingescannte PDFs enthalten keinen lesbaren Text. Sie können die Merkmale trotzdem erfassen: Stelle auf der Zeichnung einrahmen und den Wert eintragen. Eine automatische Texterkennung für Scans ist geplant.</p></details>
+  <details><summary>Sind die PDFs von StepDraw CAD durchsuchbar?</summary>
+    <p>Ja. Maße und Schriftfeld stehen als echter Text in der PDF – suchbar mit Strg+F und kopierbar. Wer das nicht möchte, schaltet es in der Firmenvorlage ab (dann wie früher als Umrisse).</p></details>
   <details><summary>Welche Normen werden unterstützt?</summary>
     <p>U. a. ISO 128-2/-3, ISO 129-1, ISO 15786, ISO 6410, ISO 2768, ISO 286, ISO 5455, ISO 5457, ISO 7200.</p></details>
   <details><summary>Kann ich auf Rechnung kaufen?</summary>
@@ -273,5 +378,6 @@ fetch("counter.json", {cache: "no-store"}).then(r => r.json()).then(d => {
 }).catch(() => {});
 </script>
 <script src="shop.js"></script>
+<script src="ui.js"></script>
 </body>
 </html>

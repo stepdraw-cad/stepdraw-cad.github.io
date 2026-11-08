@@ -1,7 +1,1 @@
-{
- "version": "0.1.26",
- "url": "https://stepdraw.de/#download",
- "setup": "https://github.com/stepdraw-cad/stepdraw-cad.github.io/releases/download/v0.1.26/StepDraw-Setup.exe",
- "sha256": "90d9dec5e377cd2d2cb96474c3e328d955ec84230fce685a7fd603ef32ad5106",
- "notes": "Neu: Zusatzmodule im Shop hinterlegt (Prüfplan & Erstbemusterung, Angebotskalkulation, Duo-Paket); Website mit Abschnitt „Zusatzmodule“."
-}
+{"version": "0.1.29", "url": "https://stepdraw-cad.github.io/#download", "notes": "Prüfplan und Angebot aus PDF-Zeichnungen, durchsuchbare PDFs; Maße frei platzieren, automatisches Sichern."}

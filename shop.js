@@ -1,7 +1,10 @@
-// StepDraw CAD – Shop-Einstellungen der Website (die einzige Datei, die zum Verkaufsstart angepasst wird)
+// StepDraw CAD – Shop-Einstellungen der Website (Kauflinks, Rabattcode, Download)
 // Kauflinks aus Lemon Squeezy (Produkt → Variante → "Share" → Checkout-Link) hier eintragen.
 const SHOP = {
-  launch: "2026-11-30",              // Verkaufsstart (JJJJ-MM-TT); ab diesem Tag: Banner weg, Preise sichtbar, Kaufknöpfe aktiv
+  // Offene Beta: Preise sichtbar, Vorabkauf aktiv. Die Kaufknöpfe werden erst klickbar,
+  // wenn der Kunde die Beta-Hinweise per Häkchen bestätigt hat (#beta-ok).
+  sale: true,                        // false = Preise ausblenden, keine Kaufknöpfe
+  founderCode: "GRUENDER25",         // Rabattcode aus Lemon Squeezy (Gründerpreis −25 %); "" = keiner
   buy: {
     // Hauptprogramm StepDraw CAD: ein Link, dort wählt der Kunde Monatsabo, Jahresabo oder Kauf
     monthly:   "https://stepdraw-cad.lemonsqueezy.com/checkout/buy/3663125f-5626-4e9b-aad5-604528ef9158",
@@ -25,30 +28,49 @@ const SHOP = {
 
 (function () {
   const en = document.documentElement.lang === "en";
-  const live = new Date() >= new Date(SHOP.launch + "T00:00:00");
-  if (live) {
-    document.documentElement.classList.add("live");   // Preise einblenden
-    const b = document.querySelector(".banner");
-    if (b) b.remove();
+  const live = SHOP.sale;
+  if (live) document.documentElement.classList.add("live");   // Preise einblenden
+  const withCode = url => {
+    if (!url || !SHOP.founderCode) return url;
+    return url + (url.includes("?") ? "&" : "?") + "checkout[discount_code]=" + encodeURIComponent(SHOP.founderCode);
+  };
+  const ok = document.getElementById("beta-ok");
+  const big = [...document.querySelectorAll("[data-buy]")];
+  const small = [...document.querySelectorAll("[data-buy-small]")];
+  function update() {
+    const on = live && (!ok || ok.checked);
+    big.forEach(a => {
+      const url = SHOP.buy[a.dataset.buy];
+      if (on && url) {
+        a.href = withCode(url);
+        a.classList.remove("disabled");
+        a.classList.add("btn-primary");
+        a.removeAttribute("aria-disabled");
+        a.removeAttribute("title");
+      } else {
+        a.removeAttribute("href");
+        a.classList.add("disabled");
+        a.classList.remove("btn-primary");
+        a.setAttribute("aria-disabled", "true");
+        if (live) a.title = en ? "Please confirm the beta notes above first" : "Bitte zuerst die Beta-Hinweise oben bestätigen";
+      }
+    });
+    small.forEach(a => {
+      const url = SHOP.buy[a.dataset.buySmall];
+      if (on && url) { a.href = withCode(url); a.classList.remove("disabled"); a.removeAttribute("aria-disabled"); }
+      else { a.removeAttribute("href"); a.classList.add("disabled"); a.setAttribute("aria-disabled", "true"); }
+    });
   }
-  document.querySelectorAll("[data-buy]").forEach(a => {
-    const url = SHOP.buy[a.dataset.buy];
-    if (live && url) {
-      a.href = url;
-      a.classList.remove("disabled");
-      a.classList.add("btn-primary");
-      a.removeAttribute("aria-disabled");
-      a.textContent = en ? "Buy now" : "Jetzt kaufen";
+  if (ok) ok.addEventListener("change", update);
+  update();
+  // Klick auf einen gesperrten Kaufknopf führt zu den Beta-Hinweisen
+  big.concat(small).forEach(a => a.addEventListener("click", e => {
+    if (a.classList.contains("disabled")) {
+      e.preventDefault();
+      const box = document.getElementById("beta");
+      if (box) { box.scrollIntoView({behavior: "smooth", block: "center"}); box.classList.add("attn"); setTimeout(() => box.classList.remove("attn"), 1600); }
     }
-  });
-  document.querySelectorAll("[data-buy-small]").forEach(a => {
-    const url = SHOP.buy[a.dataset.buySmall];
-    if (live && url) {
-      a.href = url;
-      a.classList.remove("disabled");
-      a.removeAttribute("aria-disabled");
-    }
-  });
+  }));
   const dl = document.getElementById("download-link");
   if (dl && SHOP.download) dl.href = SHOP.download;
   const st = document.getElementById("store-link");
