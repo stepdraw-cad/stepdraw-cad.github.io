@@ -316,3 +316,10 @@ html.js .reveal.in { opacity: 1; transform: none; }
 .counter small { font-size: .875rem; color: var(--muted); }
 .btn.disabled { cursor: not-allowed; }
 @media (prefers-reduced-motion: reduce) { .beta-box { transition: none; } }
+
+/* Vor dem Verkaufsstart (SHOP.checkout = false): Preise sichtbar, Kauf noch nicht möglich */
+.pre { display: none; }
+html.precheckout .pre { display: inline; }
+html.precheckout .co, html.precheckout .co-block, html.live.precheckout .after-inline.co { display: none; }
+html.precheckout p.pre-note { display: block; text-align: center; font-weight: 600; margin: .4rem auto 1.2rem; }
+html.precheckout .price .btn.disabled { cursor: default; }

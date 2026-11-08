@@ -4,6 +4,8 @@ const SHOP = {
   // Offene Beta: Preise sichtbar, Vorabkauf aktiv. Die Kaufknöpfe werden erst klickbar,
   // wenn der Kunde die Beta-Hinweise per Häkchen bestätigt hat (#beta-ok).
   sale: true,                        // false = Preise ausblenden, keine Kaufknöpfe
+  checkout: false,                   // false = Preise sichtbar, aber noch kein Kauf ("In Kürze erhältlich");
+                                     // true erst nach Steuernummer + Lemon Squeezy im Live-Modus (Live-Links eintragen!)
   founderCode: "GRUENDER25",         // Rabattcode aus Lemon Squeezy (Gründerpreis −25 %); "" = keiner
   buy: {
     // Hauptprogramm StepDraw CAD: ein Link, dort wählt der Kunde Monatsabo, Jahresabo oder Kauf
@@ -30,6 +32,8 @@ const SHOP = {
   const en = document.documentElement.lang === "en";
   const live = SHOP.sale;
   if (live) document.documentElement.classList.add("live");   // Preise einblenden
+  const checkout = live && SHOP.checkout;
+  document.documentElement.classList.add(checkout ? "checkout" : "precheckout");
   const withCode = url => {
     if (!url || !SHOP.founderCode) return url;
     return url + (url.includes("?") ? "&" : "?") + "checkout[discount_code]=" + encodeURIComponent(SHOP.founderCode);
@@ -38,7 +42,7 @@ const SHOP = {
   const big = [...document.querySelectorAll("[data-buy]")];
   const small = [...document.querySelectorAll("[data-buy-small]")];
   function update() {
-    const on = live && (!ok || ok.checked);
+    const on = checkout && (!ok || ok.checked);
     big.forEach(a => {
       const url = SHOP.buy[a.dataset.buy];
       if (on && url) {
@@ -52,7 +56,8 @@ const SHOP = {
         a.classList.add("disabled");
         a.classList.remove("btn-primary");
         a.setAttribute("aria-disabled", "true");
-        if (live) a.title = en ? "Please confirm the beta notes above first" : "Bitte zuerst die Beta-Hinweise oben bestätigen";
+        if (!checkout) { a.textContent = en ? "Available soon" : "In Kürze erhältlich"; a.title = ""; }
+        else a.title = en ? "Please confirm the beta notes above first" : "Bitte zuerst die Beta-Hinweise oben bestätigen";
       }
     });
     small.forEach(a => {
@@ -67,6 +72,7 @@ const SHOP = {
   big.concat(small).forEach(a => a.addEventListener("click", e => {
     if (a.classList.contains("disabled")) {
       e.preventDefault();
+      if (!checkout) return;
       const box = document.getElementById("beta");
       if (box) { box.scrollIntoView({behavior: "smooth", block: "center"}); box.classList.add("attn"); setTimeout(() => box.classList.remove("attn"), 1600); }
     }
