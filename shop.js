@@ -79,7 +79,62 @@ const SHOP = {
   }));
   const dl = document.getElementById("download-link");
   if (dl && SHOP.download) dl.href = SHOP.download;
+  mobileHint(dl);
   const st = document.getElementById("store-link");
   if (st && SHOP.store) st.href = SHOP.store;
   else if (st && st.parentElement) st.parentElement.style.display = "none";   // noch kein Store-Eintrag
 })();
+
+
+// Handy/Tablet: StepDraw läuft unter Windows – statt des Downloads den Link für später an sich selbst
+// senden (öffnet das eigene Mailprogramm, nichts wird gespeichert) oder kopieren. Beide Klicks zählt
+// GoatCounter als Ereignis („link-mail“, „link-copy“), ohne persönliche Daten.
+function mobileHint(dl) {
+  const ua = navigator.userAgent || "";
+  const mobile = /Android|iPhone|iPad|iPod|Mobile/i.test(ua) ||
+                 (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);      // iPad mit Desktop-Ansicht
+  if (!mobile || !dl) return;
+  const en = (document.documentElement.lang || "de").startsWith("en");
+  const url = en ? "https://stepdraw.de/en/#download" : "https://stepdraw.de/#download";
+  const t = en ? {
+    head: "StepDraw CAD runs on Windows PCs.",
+    text: "Send yourself the link and open it later on your computer:",
+    mail: "Email link to me", copy: "Copy link", done: "Link copied",
+    subj: "StepDraw CAD – download for Windows",
+    body: "Download the free beta on your Windows PC:\n" + url
+  } : {
+    head: "StepDraw CAD läuft auf Windows-PCs.",
+    text: "Schicken Sie sich den Link und öffnen Sie ihn später am Computer:",
+    mail: "Link an mich senden", copy: "Link kopieren", done: "Link kopiert",
+    subj: "StepDraw CAD – Download für Windows",
+    body: "Kostenlose Beta am Windows-PC herunterladen:\n" + url
+  };
+  const count = (path) => { try { window.goatcounter && window.goatcounter.count({path: path, event: true}); } catch (e) {} };
+  const box = document.createElement("div");
+  box.className = "mobile-hint";
+  box.innerHTML = "<p><b></b><br><span></span></p><div class='mobile-actions'></div>";
+  box.querySelector("b").textContent = t.head;
+  box.querySelector("span").textContent = t.text;
+  const acts = box.querySelector(".mobile-actions");
+  const mail = document.createElement("a");
+  mail.className = "btn btn-dark";
+  mail.textContent = t.mail;
+  mail.href = "mailto:?subject=" + encodeURIComponent(t.subj) + "&body=" + encodeURIComponent(t.body);
+  mail.addEventListener("click", () => count("link-mail"));
+  acts.appendChild(mail);
+  if (navigator.clipboard) {
+    const cp = document.createElement("button");
+    cp.type = "button";
+    cp.className = "btn btn-light";
+    cp.textContent = t.copy;
+    cp.addEventListener("click", () => {
+      navigator.clipboard.writeText(url).then(() => { cp.textContent = t.done; count("link-copy"); }, () => {});
+    });
+    acts.appendChild(cp);
+  }
+  const row = dl.closest(".download-row");
+  if (row) {
+    row.style.display = "none";                        // Windows-Download am Handy ausblenden
+    row.parentNode.insertBefore(box, row);
+  }
+}

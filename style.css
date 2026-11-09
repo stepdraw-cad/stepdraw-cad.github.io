@@ -227,6 +227,11 @@ html.live .prices.after-launch { display: grid; }
 /* Hinweis Windows SmartScreen */
 .download-row { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem 1rem; }
 .download-row .store { color: var(--muted); }
+/* Handy: Link für später an sich selbst senden */
+.mobile-hint { max-width: 760px; background: var(--bg-soft); padding: 1rem 1.25rem; border-radius: 12px; }
+.mobile-hint p { margin: 0 0 .8rem; line-height: 1.5; }
+.mobile-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+.btn-light { background: #fff; color: var(--navy); border: 1px solid #c9d2df; font: inherit; cursor: pointer; }
 .smartscreen { max-width: 760px; margin: 1.6rem 0 0; text-align: left; background: var(--bg-soft);
                padding: 1rem 1.25rem; font-size: .9375rem; }
 .smartscreen p { margin: 0 0 .5rem; }
